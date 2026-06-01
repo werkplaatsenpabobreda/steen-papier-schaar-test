@@ -31,7 +31,6 @@ function resetSpel () {
     spelstatus = 0
     tool = -1
     toolvandeander = -1
-    radio.setGroup(1)
     basic.showLeds(`
         # . . . #
         . . . . .
@@ -73,4 +72,5 @@ let tool = 0
 let toolvandeander = 0
 let spelstatus = 0
 music.setVolume(95)
+radio.setGroup(1)
 resetSpel()
