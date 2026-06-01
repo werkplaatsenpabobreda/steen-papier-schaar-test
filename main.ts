@@ -64,6 +64,14 @@ function verliezen () {
     basic.showIcon(IconNames.No)
     music.play(music.stringPlayable("A F D C C C C C ", 120), music.PlaybackMode.InBackground)
 }
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "resetspel") {
+        resetSpel()
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("resetspel")
+})
 function winnen () {
     basic.showIcon(IconNames.Yes)
     music.play(music.stringPlayable("E D G F B A C5 B ", 120), music.PlaybackMode.InBackground)
